@@ -1,0 +1,30 @@
+{
+  "name": "whatthecommit",
+  "version": "1.0.0",
+  "description": "Make fucking commits when you're pissed.",
+  "main": "bin/index.ts",
+  "scripts": {
+    "start": "nodemon index.ts",
+    "test": "uvu -r tests/index.ts test",
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+		"build:watch": "tsc -w",
+    "lint" : "xo",
+    "lint:fix" : "xo --fix"
+  },
+  "keywords": [
+    "commit",
+    "whatthecommit"
+  ],
+  "author": "Aadarsha Acharya",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^11.8.2",
+    "simple-git": "^2.38.1"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "typescript": "^4.2.4",
+    "uvu": "^0.5.1",
+    "xo": "^0.40.0"
+  }
+}
