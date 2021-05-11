@@ -8,4 +8,4 @@
 </p>
 
 
-> ⚠️ Note : Don't use this on your serious projects as it commits the swear words which you probably don't want in your git logs.
+> ⚠️ Note : Don't use this on your serious projects as it commits the swear words which you probably don't want.

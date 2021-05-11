@@ -1,10 +1,10 @@
 {
-  "name": "whatthecommit",
-  "version": "0.0.1",
+  "name": "shitcommits",
+  "version": "0.0.2",
   "description": "Commits code with shitty messages.",
   "main": "./lib/bin/index.js",
   "bin": {
-    "wtc": "./lib/bin/index.js"
+    "shit": "./lib/bin/index.js"
   },
   "files": [
     "lib/"
@@ -12,6 +12,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "repository": "https://github.com/adarshaacharya/shitcommits.git",
   "author": "Aadarsha <connectwithadarsha@gmail.com>",
   "license": "MIT",
   "scripts": {
