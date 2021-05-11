@@ -55,8 +55,8 @@ export async function gitAddCommit() {
   try {
     const { body }: { body: string } = await got(url);
     await git.add(['.'], handleAdd);
-    spinner.succeed();
     await git.commit(body, handleCommit);
+    spinner.succeed();
     logUpdate(`\ncommit msg : ${body}\n`);
     spinner.stop();
   } catch (error) {
