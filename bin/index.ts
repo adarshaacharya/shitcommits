@@ -50,6 +50,9 @@ function handleCommit() {
   spinner.text = 'committing files.\n';
 }
 
+
+
+
 export async function gitAddCommit() {
   try {
     const { body }: { body: string } = await got(url);
