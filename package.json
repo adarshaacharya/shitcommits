@@ -1,12 +1,12 @@
 {
   "name": "whatthecommit",
   "version": "0.0.1",
-  "description": "Generate frustation on your commit messages.",
+  "description": "Commits code with shitty messages.",
   "main": "./lib/bin/index.js",
   "bin": {
     "wtc": "./lib/bin/index.js"
   },
-  
+
   "files": [
     "lib/"
   ],
