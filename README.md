@@ -68,7 +68,7 @@ Read [Change Log](CHANGELOG.md) for complete logs.
 
 ## Contributing
 
-You can [raise issues](https://github.com/adarshaacharya/shitcommits/issues) or check [Contributing Guide](CONTRIBUTING.md) for Contribution guidelines if you love to have some of your contributions to this project.
+You can [raise issues](https://github.com/adarshaacharya/shitcommits/issues) or check [Contributing Guide](CONTRIBUTING.md) if you love to have some of your contributions to this project.
 
 ## Show your support
 

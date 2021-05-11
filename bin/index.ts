@@ -71,8 +71,8 @@ function handleCommit() {
     spinner.succeed();
     spinner.stop();
 
-    // await git.add(['.'], handleAdd);
-    // await git.commit(body, handleCommit);
+    await git.add(['.'], handleAdd);
+    await git.commit(body, handleCommit);
 
     logUpdate(chalk.yellowBright(`\ngit commit -m"${body}"\n`));
   } catch (error) {
