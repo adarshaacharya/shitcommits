@@ -31,12 +31,10 @@ dns.lookup('whatthecommit.com', (err) => {
 });
 
 function handleAdd() {
-  
-setTimeout(() => {
-  spinner.color = 'yellow';
-  spinner.text = 'Loading rainbows';
-}, 1000);
-
+  setTimeout(() => {
+    spinner.color = 'yellow';
+    spinner.text = 'Loading rainbows';
+  }, 1000);
 }
 
 function handleCommit(body: string) {
@@ -55,5 +53,4 @@ export async function gitAddCommit() {
   }
 }
 
-
-gitAddCommit()
+gitAddCommit();
