@@ -43,7 +43,7 @@ function handleCommit(body: string) {
   spinner.text = `commit msg : ${body}`;
 }
 
-async function gitAddCommit() {
+export async function gitAddCommit() {
   try {
     const { body }: { body: string } = await got(url);
     await git.add(['.'], handleAdd);
