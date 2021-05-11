@@ -51,8 +51,6 @@ function handleCommit() {
 }
 
 
-
-
 export async function gitAddCommit() {
   try {
     const { body }: { body: string } = await got(url);
