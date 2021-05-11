@@ -3,6 +3,13 @@
 </p>
 
 <p align="center">
+<a href="https://www.npmjs.org/package/shitcommits"><img src="https://img.shields.io/npm/v/shitcommits?style=flat-square&logo=npm&label=npm"></a>
+<a href="https://www.npmjs.org/package/shitcommits"><img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/shitcommits?color=brightgreen&label=package%20size&style=flat-square"></a>
+<a href="https://www.npmjs.org/package/shitcommits"><img alt="npm bundle size" src="https://img.shields.io/npm/l/shitcommits?style=flat-square"></a>
+
+</p>
+
+<p align="center">
 <b>
    Commit your code with shitty commit messages. 💩 
    </b>
@@ -14,18 +21,18 @@
 
 > ⚠️ Note : Don't use this on your serious projects as it commits the swear words which you probably don't want.
 
-## Install
+## Installation
 
 Make sure you have [Node.js](https://nodejs.org/) installed in your machine.
 
 ```bash
-$ npm i -g shitcommits
+$ npm install -g shitcommits
 ```
 
 or,
 
 ```bash
-$ sudo npm i -g shitcommits
+$ sudo npm install -g shitcommits
 ```
 
 ## Usage
