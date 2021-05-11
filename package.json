@@ -1,13 +1,25 @@
 {
   "name": "whatthecommit",
   "version": "0.0.1",
-  "description": "Make fucking commits when you're pissed.",
-  "main": "bin/index.ts",
+  "description": "Generate frustation on your commit messages.",
+  "main": "./lib/bin/index.js",
+  "bin": {
+    "wtc": "./lib/bin/index.js"
+  },
+  "files": [
+    "lib/"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "Aadarsha <connectwithadarsha@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "start": "nodemon index.ts",
     "test": "uvu -r ts-node/register tests",
-    "build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json",
+    "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -w",
+    "prepublishOnly": "npm run build",
     "lint": "xo",
     "lint:fix": "xo --fix"
   },
@@ -15,8 +27,6 @@
     "commit",
     "whatthecommit"
   ],
-  "author": "Aadarsha Acharya",
-  "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.1",
     "got": "^11.8.2",
