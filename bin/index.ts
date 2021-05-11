@@ -23,8 +23,11 @@ const Error = chalk.bold.red;
 if (arg) {
   if (arg === '-h' || arg === '--help') {
     console.log(`
-      usage: wtc
-    `);
+		usage: shit
+	`);
+    console.log(`
+		version: shit --version
+	`);
   } else if (arg === '-v' || arg === '--version') {
     logUpdate(chalk.whiteBright.bold(`version ${pkg.version}`));
     process.exit(1);
