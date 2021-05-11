@@ -1,6 +1,6 @@
 {
   "name": "shitcommits",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Commits code with shitty messages.",
   "main": "./lib/bin/index.js",
   "bin": {
