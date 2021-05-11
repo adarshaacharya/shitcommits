@@ -31,7 +31,12 @@ dns.lookup('whatthecommit.com', (err) => {
 });
 
 function handleAdd() {
-  spinner.text = 'staging the files.';
+  
+setTimeout(() => {
+  spinner.color = 'yellow';
+  spinner.text = 'Loading rainbows';
+}, 1000);
+
 }
 
 function handleCommit(body: string) {
