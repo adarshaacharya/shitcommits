@@ -31,7 +31,6 @@ dns.lookup('whatthecommit.com', (err) => {
 });
 
 setTimeout(() => {
-  spinner.color = 'yellow';
   spinner.text = 'Loading rainbows';
 }, 1000);
 
