@@ -6,6 +6,7 @@
   "bin": {
     "wtc": "./lib/bin/index.js"
   },
+  
   "files": [
     "lib/"
   ],
