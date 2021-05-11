@@ -33,7 +33,7 @@ dns.lookup('whatthecommit.com', (err) => {
 function handleAdd() {
   setTimeout(() => {
     spinner.color = 'yellow';
-    spinner.text = 'Loading rainbows';
+    spinner.text = 'staging files.';
   }, 1000);
 }
 
