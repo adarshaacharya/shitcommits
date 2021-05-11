@@ -6,6 +6,7 @@ import pkg from '../package.json';
 import { argv } from 'process';
 import got from 'got';
 import logUpdate from 'log-update';
+import chalk from 'chalk';
 
 updateNotifier({ pkg }).notify();
 
@@ -20,7 +21,7 @@ if (arg) {
       usage: wtc
     `);
   } else {
-    console.log(`Unknown option ${arg}`);
+    logUpdate(chalk.bold.red(`Unknown option ${arg}`));
     process.exit(0);
   }
 }
@@ -50,14 +51,13 @@ function handleCommit() {
   spinner.text = 'committing files.\n';
 }
 
-
 export async function gitAddCommit() {
   try {
     const { body }: { body: string } = await got(url);
     await git.add(['.'], handleAdd);
-    await git.commit(body, handleCommit);
+    // await git.commit(body, handleCommit);
     spinner.succeed();
-    logUpdate(`\ncommit msg : ${body}\n`);
+    logUpdate(chalk.blue.bold(`\ncommit msg : ${body}\n`));
     spinner.stop();
   } catch (error) {
     logUpdate(error);
