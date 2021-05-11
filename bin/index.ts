@@ -46,7 +46,7 @@ function handleAdd() {
   spinner.text = 'staging files.\n';
 }
 
-function handleCommit(body: string) {
+function handleCommit() {
   spinner.text = 'committing files.\n';
 }
 
