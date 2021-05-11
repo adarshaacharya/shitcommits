@@ -16,15 +16,16 @@
   "author": "Aadarsha <connectwithadarsha@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.ts",
+    "dev": "ts-node lib/index.ts",
     "test": "uvu -r ts-node/register tests",
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -w",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "commit",
-    "whatthecommit"
+    "commits",
+    "shitcommits",
+    "funnycommit"
   ],
   "dependencies": {
     "chalk": "^4.1.1",

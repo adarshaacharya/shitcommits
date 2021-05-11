@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import dns from 'dns';
 import {argv} from 'process';
 import updateNotifier from 'update-notifier';
