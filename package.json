@@ -1,6 +1,6 @@
 {
   "name": "shitcommits",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Commits code with shitty messages.",
   "main": "./lib/bin/index.js",
   "bin": {
@@ -16,7 +16,7 @@
   "author": "Aadarsha <connectwithadarsha@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node lib/index.ts",
+    "dev": "ts-node bin/index.ts",
     "test": "uvu -r ts-node/register tests",
     "build": "tsc -p tsconfig.json",
     "build:watch": "tsc -w",
