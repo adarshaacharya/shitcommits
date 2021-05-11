@@ -36,6 +36,7 @@ setTimeout(() => {
 
 function handleAdd() {
   spinner.color = 'yellow';
+
   spinner.text = 'staging the files.';
 }
 
