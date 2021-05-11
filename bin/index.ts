@@ -34,7 +34,7 @@ function handleAdd() {
   setTimeout(() => {
     spinner.color = 'yellow';
     spinner.text = 'staging files.';
-  }, 1000);
+  }, 500);
 }
 
 function handleCommit(body: string) {
