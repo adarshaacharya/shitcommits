@@ -38,7 +38,7 @@ function handleAdd() {
 }
 
 function handleCommit(body: string) {
-  spinner.text = `commit msg : ${body}`;
+  spinner.text = `commit msg : ${body}.`;
 }
 
 export async function gitAddCommit() {
