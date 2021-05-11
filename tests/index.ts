@@ -1,10 +1,8 @@
-import {test} from 'uvu';
+import { test } from 'uvu';
 import * as assert from 'uvu/assert';
 
-test('Math.sqrt()', () => {
-	assert.is(Math.sqrt(4), 2);
-	assert.is(Math.sqrt(144), 12);
-	assert.is(Math.sqrt(2), Math.SQRT2);
+// TODO : Write unit tests for all functions
+test('check function', () => {
+  console.log('todo tests');
 });
-
 test.run();

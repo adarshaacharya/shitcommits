@@ -20,22 +20,22 @@ const arg = argv[2];
 // Chalk theme
 const Error = chalk.bold.red;
 
-if (arg) {
-  if (arg === '-h' || arg === '--help') {
-    console.log(`
+  if (arg) {
+    if (arg === '-h' || arg === '--help') {
+      console.log(`
 		usage: shit
 	`);
-    console.log(`
+      console.log(`
 		version: shit --version
 	`);
-  } else if (arg === '-v' || arg === '--version') {
-    logUpdate(chalk.whiteBright.bold(`version ${pkg.version}`));
-    process.exit(1);
-  } else {
-    logUpdate(Error(`Wtf are you even typing ${arg}`));
-    process.exit(1);
+    } else if (arg === '-v' || arg === '--version') {
+      logUpdate(chalk.whiteBright.bold(`version ${pkg.version}`));
+      process.exit(1);
+    } else {
+      logUpdate(Error(`Wtf are you even typing ${arg}`));
+      process.exit(1);
+    }
   }
-}
 
 dns.lookup('whatthecommit.com', (error) => {
   if (error) {
@@ -48,14 +48,14 @@ dns.lookup('whatthecommit.com', (error) => {
   }
 });
 
-function handleAdd() {
+export function handleAdd() {
   spinner.text = 'staging files.\n';
   spinner.start();
   spinner.succeed();
   spinner.stop();
 }
 
-function handleCommit() {
+export function handleCommit() {
   spinner.text = 'committing files.\n';
   spinner.start();
   spinner.succeed();
@@ -80,3 +80,4 @@ function handleCommit() {
     process.exit(1);
   }
 })();
+
