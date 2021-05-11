@@ -31,12 +31,11 @@ dns.lookup('whatthecommit.com', (err) => {
 });
 
 setTimeout(() => {
+  spinner.color = 'yellow';
   spinner.text = 'Loading rainbows';
 }, 1000);
 
 function handleAdd() {
-  spinner.color = 'yellow';
-
   spinner.text = 'staging the files.';
 }
 
