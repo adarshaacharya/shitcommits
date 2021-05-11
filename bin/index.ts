@@ -5,50 +5,61 @@ import updateNotifier from 'update-notifier';
 import pkg from '../package.json';
 import { argv } from 'process';
 import got from 'got';
+import logUpdate from 'log-update';
 
 updateNotifier({ pkg }).notify();
 
 const git: SimpleGit = simpleGit();
 const spinner = ora();
 const url = `http://whatthecommit.com/index.txt`;
+const arg = argv[2];
 
-if (argv[2] === '-h' || argv[2] === '--help') {
-  console.log(`
-    usage: wtc
-  `);
-} else {
-  console.log(`Unknown option ${argv[2]}`);
+if (arg) {
+  if (arg === '-h' || arg === '--help') {
+    console.log(`
+      usage: wtc
+    `);
+  } else {
+    console.log(`Unknown option ${arg}`);
+    process.exit(0);
+  }
 }
+
+// if (process.argv.length <= 2) {
+//   console.log(`Unknown agrument`);
+//   process.exit(0);
+// }
 
 dns.lookup('whatthecommit.com', (err) => {
   if (err) {
-    console.log(`\nCheck internet connection!\n`);
+    logUpdate(`\Connect device to internet mofos!\n`);
     process.exit(1);
   } else {
-    spinner.text = 'What the actual fuck?';
+    logUpdate();
+    spinner.text = 'Loading..\n';
     spinner.start();
   }
 });
 
 function handleAdd() {
-  setTimeout(() => {
-    spinner.color = 'yellow';
-    spinner.text = 'staging files.';
-  }, 500);
+  spinner.color = 'yellow';
+  spinner.text = 'staging files.\n';
 }
 
 function handleCommit(body: string) {
-  spinner.text = `commit msg : ${body}.`;
+  spinner.text = 'committing files.\n';
 }
 
 export async function gitAddCommit() {
   try {
     const { body }: { body: string } = await got(url);
     await git.add(['.'], handleAdd);
-    await git.commit(body, () => handleCommit(body));
+    spinner.succeed();
+    await git.commit(body, handleCommit(body));
+    logUpdate(`\ncommit msg : ${body}\n`);
     spinner.stop();
   } catch (error) {
-    console.log(error);
+    logUpdate(error);
     process.exit(1);
   }
 }
