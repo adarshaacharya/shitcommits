@@ -2,7 +2,7 @@
 
 ## v1.0.0
 
-- Major releases with full fleged docs.
+- Major releases with full fledged docs.
 
 ```bash
 $ npm i -g shit@1.0.0
