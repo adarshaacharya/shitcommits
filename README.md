@@ -11,7 +11,7 @@
 
 <p align="center">
 <b>
-   Commit your code with shitty commit messages. 💩 
+   A perfect commit message doesn't exi-. 💩 
    </b>
 </b>
 
